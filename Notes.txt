@@ -1,0 +1,46 @@
+
+
+    URL: http://localhost/pagination_php
+
+   
+
+
+
+    steps:
+    connect to database
+
+    define how many results you want per page
+
+    find out the number of results stored in database
+
+    determine number of total pages available
+
+    determine which page number visitor is currently on
+
+    determine the sql LIMIT starting number for the results on the displaying page, 
+
+    retrieve selected results from database and display them on page 
+
+    display the links to the pages
+
+
+
+
+
+
+
+concept:
+  determine each pages sql LIMIT OFFSET STARTING number  automatically
+        page1, 2 results per page, LIMIT 0,2
+        page2, 2 results per page, LIMIT 2,2
+        page3, 2 results per page, LIMIT 4,2
+        page4, 2 results per page, LIMIT 6,2
+        starting-offset_number = (page_number - 1)* results_per_page 
+
+        So each page will continue from where it left off from on the last page
+
+        for ex. 
+        page2-1 = 1 *2 = 2
+        page3-1 = 2 *2 = 4
+        page4-1 = 3 *2 = 6
+    
